@@ -1,0 +1,16 @@
+Kevin Bolick
+12/11/13
+
+This code is a modification of Matt Might's CESK machine code obtained at matt.might.net
+
+The CESK (Control, Environment, Store, Kontinuation) is a state machine that can be used as a static analyzer
+with a few small modifications. The machine needs to be abstracted in order to be useful, because without
+abstraction, there is no termination guarantee. The environment and store are abstracted in order to finitize
+them.
+
+This is a static analyzer for programs in continuation-passing style.
+
+usage:
+	./0cfa program variable
+
+0CFA is performed on the input program, and every lambda term which may flow to the input variable is listed.
